@@ -110,7 +110,7 @@ function setup()
   blink.frameDelay = 20;
   eat.frameDelay = 20;
 
-  bunny = createSprite(170,canH - 105,100,100);
+  bunny = createSprite(170,canH - 80,100,100);
   bunny.scale = 0.2;
 
   bunny.addAnimation('blinking',blink);
@@ -199,7 +199,7 @@ function collide(body,sprite)
   if(body!=null)
         {
          var d = dist(body.position.x,body.position.y,sprite.position.x,sprite.position.y);
-          if(d<=80)
+          if(d<=60)
             {
               World.remove(engine.world,fruit);
                fruit = null;
